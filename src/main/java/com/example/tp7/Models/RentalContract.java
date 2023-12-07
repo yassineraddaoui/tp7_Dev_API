@@ -1,5 +1,4 @@
 package com.example.tp7.Models;
-
 import jakarta.persistence.*;
 import lombok.*;
 
