@@ -1,6 +1,5 @@
 package com.example.tp7.Models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,8 +24,22 @@ public class RentalContract {
     private double contactInformation;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="id_user", nullable=false)
-    @JsonIgnore
+    @JoinColumn(name="id_owner", nullable=false)
     private Owner owner;
+
+
+    @Column(name = "monthly_rent", nullable = false)
+    private double monthlyRent;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="id_property", nullable=false)
+    private Property property;
+
+
+
+
+
+
+
 
 }

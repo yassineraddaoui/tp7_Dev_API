@@ -15,16 +15,18 @@ import java.util.Set;
 @ToString
 @Table(name = "owners")
 
-public class Owner {
+public class    Owner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name", nullable = false)
     private String name;
+    @Column(name = "password", nullable = false)
+    private String password;
 
     @Column(name = "contact_information", nullable = false)
-    private double contactInformation;
+    private String contactInformation;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "owner", cascade = CascadeType.ALL)
     Set<RentalContract> contracts=new HashSet<>();
