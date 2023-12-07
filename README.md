@@ -14,7 +14,8 @@ entités et les relations principales du système.<br>
 <br>• Spring Data JPA
 <br>• Swagger
 <br>• Mysql
-
+<br>• Lombok
+s
 ## Tasks
 • Implémentation des contrôleurs REST pour les entités principales du diagramme de
 classes. Chaque entité a ses propres opérations CRUD (Create, Read,
